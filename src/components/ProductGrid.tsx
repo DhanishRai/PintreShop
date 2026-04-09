@@ -5,19 +5,35 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProductCard } from "./ProductCard";
-import productsData from "@/data/products.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function ProductGrid() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState("All");
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const categories = ["All", ...new Set(productsData.map((p) => p.category))];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  const categories = ["All", ...new Set(products.map((p) => p.category))];
 
   const filteredProducts = activeCategory === "All" 
-    ? productsData 
-    : productsData.filter((p) => p.category === activeCategory);
+    ? products 
+    : products.filter((p) => p.category === activeCategory);
 
   useGSAP(() => {
     // Initial entrance animation for the first load
@@ -33,7 +49,7 @@ export function ProductGrid() {
         toggleActions: "play none none reverse",
       },
     });
-  }, [activeCategory]); // Re-run when category changes to animate new items
+  }, [activeCategory, products, loading]); // Re-run when products load or category changes
 
   return (
     <section 
@@ -59,13 +75,23 @@ export function ProductGrid() {
       </div>
 
       {/* Masonry Grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-        {filteredProducts.map((product) => (
-          <div key={product.id} className="product-card break-inside-avoid">
-            <ProductCard product={product} />
-          </div>
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center items-center py-20">
+          <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      ) : filteredProducts.length > 0 ? (
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          {filteredProducts.map((product) => (
+            <div key={product.id} className="product-card break-inside-avoid">
+              <ProductCard product={product} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-20">
+          <p className="text-foreground/40 text-xl font-bold tracking-widest uppercase">No trends found.</p>
+        </div>
+      )}
       
       {/* Load More Placeholder */}
       <div className="flex justify-center mt-32">

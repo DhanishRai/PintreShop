@@ -1,82 +1,12 @@
 [
   {
-    "id": "1",
-    "title": "Minimalist Mechanical Keyboard",
-    "description": "Experience tactile precision with this sleek, low-profile mechanical keyboard featuring RGB backlighting and hot-swappable switches.",
-    "price": "$129.99",
-    "category": "Tech",
-    "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
-    "aspectRatio": "0.8"
-  },
-  {
-    "id": "2",
-    "title": "Ultra-Wide Curved Monitor",
-    "description": "Immerse yourself in work or play with this 34-inch ultra-wide curved display, offering stunning color accuracy and a 144Hz refresh rate.",
-    "price": "$499.00",
-    "category": "Tech",
-    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
-    "aspectRatio": "1.2"
-  },
-  {
-    "id": "3",
-    "title": "Ergonomic Mesh Chair",
-    "description": "Stay comfortable during long work sessions with this premium ergonomic chair featuring adjustable lumbar support and breathable mesh.",
-    "price": "$349.99",
-    "category": "Lifestyle",
-    "image": "https://images.unsplash.com/photo-1505797149-43b007664977?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
-    "aspectRatio": "1.5"
-  },
-  {
-    "id": "4",
-    "title": "Noise Cancelling Headphones",
-    "description": "Block out the world with industry-leading noise cancellation and crystal-clear audio quality. 30-hour battery life.",
-    "price": "$299.00",
-    "category": "Tech",
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
+    "title": "rai gone wrong",
+    "description": "good product",
+    "price": "5000",
+    "category": "tech",
+    "image": "/uploads/1775748419027-B.Lee.png",
+    "affiliateLink": "https://amzn.to/4sqC4pP",
+    "id": "heikj2ul4",
     "aspectRatio": "1.0"
-  },
-  {
-    "id": "5",
-    "title": "Smart Home Hub",
-    "description": "Control your entire home with ease using this intuitive smart hub, compatible with thousands of devices.",
-    "price": "$89.99",
-    "category": "Gadgets",
-    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
-    "aspectRatio": "0.7"
-  },
-  {
-    "id": "6",
-    "title": "Portable SSD 2TB",
-    "description": "Blazing fast transfer speeds in a compact, rugged design. Perfect for creators on the go.",
-    "price": "$159.00",
-    "category": "Tech",
-    "image": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
-    "aspectRatio": "1.1"
-  },
-  {
-    "id": "7",
-    "title": "Leather Laptop Sleeve",
-    "description": "Handcrafted from premium full-grain leather, this sleeve provides elegant protection for your MacBook.",
-    "price": "$75.00",
-    "category": "Lifestyle",
-    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
-    "aspectRatio": "0.9"
-  },
-  {
-    "id": "8",
-    "title": "Mirrorless Camera v3",
-    "description": "Capture stunning 4K video and high-resolution stills with this compact, powerful mirrorless camera.",
-    "price": "$1299.00",
-    "category": "Tech",
-    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop",
-    "affiliateLink": "https://amazon.com",
-    "aspectRatio": "1.3"
   }
 ]
